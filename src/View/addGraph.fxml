@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddGraphController">
+   <children>
+      <TextField fx:id="graphTitleTextField" layoutX="146.0" layoutY="38.0" prefHeight="23.0" prefWidth="202.0" />
+      <ComboBox fx:id="pormcombox" layoutX="149.0" layoutY="189.0" prefHeight="23.0" prefWidth="202.0" />
+      <ComboBox fx:id="graphTypeCombox" layoutX="149.0" layoutY="286.0" prefHeight="23.0" prefWidth="202.0" />
+      <Label layoutX="28.0" layoutY="42.0" prefHeight="15.0" prefWidth="89.0" text="GRAPH TITLE" />
+      <Label layoutX="16.0" layoutY="141.0" text="SELECTED OPTIONS" />
+      <Label layoutX="53.0" layoutY="240.0" text="FIELDS" />
+      <Label layoutX="35.0" layoutY="290.0" prefHeight="15.0" prefWidth="75.0" text="GRAPH TYPE" />
+      <ComboBox fx:id="selectedOptionsCombox" layoutX="146.0" layoutY="137.0" prefHeight="23.0" prefWidth="202.0" />
+      <Button layoutX="149.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleConfirm" text="Confirm" />
+      <Button layoutX="296.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+      <ComboBox fx:id="selectedFieldsCombox" layoutX="146.0" layoutY="85.0" prefHeight="23.0" prefWidth="202.0" />
+      <Label layoutX="23.0" layoutY="89.0" text="SELECTED FIELDS" />
+      <ComboBox fx:id="physicalORMentalCombox" layoutX="149.0" layoutY="236.0" prefHeight="23.0" prefWidth="202.0" />
+      <Label layoutX="8.0" layoutY="193.0" text="MENTAL OR PHYSICAL" />
+   </children>
+</AnchorPane>

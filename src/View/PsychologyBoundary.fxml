@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane fx:id="tabpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.psychologyBoundaryController">
+  <tabs>
+    <Tab text="Adminstrator">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tableView" layoutX="-1.0" prefHeight="454.0" prefWidth="800.0">
+                    <columns>
+                      <TableColumn fx:id="administratorId" prefWidth="228.0" text="administratorId" />
+                      <TableColumn fx:id="administratorName" minWidth="0.0" prefWidth="265.0" text="administratorName" />
+                        <TableColumn fx:id="administratorPwd" minWidth="0.0" prefWidth="306.0" text="administratorPwd" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="      mental      ">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="mentalTableView" prefHeight="394.0" prefWidth="800.0">
+                    <columns>
+                      <TableColumn fx:id="mentaldataNoCol" prefWidth="128.0" text="mentaldataNo" />
+                      <TableColumn fx:id="checkListDataCol" prefWidth="171.0" text="checkListData" />
+                        <TableColumn fx:id="mentalCareDataCol" prefWidth="160.0" text="mentalCareData" />
+                        <TableColumn fx:id="mentalCareHistoryCol" prefWidth="195.0" text="mentalCareHistory" />
+                        <TableColumn fx:id="userIdCol" prefWidth="144.0" text="userId" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="261.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleMentalADD" text="  ADD   " />
+                  <Button layoutX="373.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleMentalDelete" text="DELETE" />
+                  <Button layoutX="486.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleMentablReFresh" text="REFRESH" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="      psysical       ">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="physicalTableView" layoutX="-4.0" prefHeight="394.0" prefWidth="806.0">
+                     <columns>
+                        <TableColumn fx:id="physicaldataNoCol" prefWidth="128.0" text="physicaldataNo" />
+                        <TableColumn fx:id="heartbeatCol" prefWidth="171.0" text="heartbeat" />
+                        <TableColumn fx:id="bloodPressureCol" prefWidth="160.0" text="bloodPressure" />
+                        <TableColumn fx:id="autonomicNerveCol" prefWidth="195.0" text="autonomicNerve" />
+                        <TableColumn fx:id="puserIdCol" prefWidth="151.0" text="userId" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="360.0" layoutY="408.0" mnemonicParsing="false" onAction="#handlePhysicalReFresh" text="REFRESH" />
+                  <Button fx:id="delete" layoutX="484.0" layoutY="408.0" mnemonicParsing="false" onAction="#handlePhysicalDelete" text="DELETE" />
+                  <Button fx:id="add" layoutX="237.0" layoutY="409.0" mnemonicParsing="false" onAction="#handlePhysicalADD" text="  ADD   " />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="        graph        ">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="graphTableView" layoutX="-1.0" prefHeight="371.0" prefWidth="800.0" />
+                  <Button layoutX="272.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleGraphAdd" text="Add" />
+                  <Button layoutX="370.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleGraphRefresh" text="Refresh" />
+                  <Button layoutX="485.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleGraphDelete" text="Delete" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="          user         ">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="userTableView" layoutX="-1.0" prefHeight="388.0" prefWidth="800.0" />
+                  <Button fx:id="userAdd" layoutX="267.0" layoutY="404.0" mnemonicParsing="false" onAction="#handleAddUserInformation" text="   ADD   " />
+                  <Button fx:id="userDelete" layoutX="371.0" layoutY="404.0" mnemonicParsing="false" onAction="#handleDeleteUserInformation" text="DELETE" />
+                  <Button fx:id="userRefresh" layoutX="469.0" layoutY="404.0" mnemonicParsing="false" onAction="#handleRefresh" text="Refresh" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+    <Tab text="FieldManagement">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="39.0" layoutY="20.0" prefHeight="40.0" prefWidth="240.0" text="Field Management" textFill="#c43f83">
+                     <font>
+                        <Font name="AdobeDevanagari-Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="add1" layoutX="702.0" layoutY="107.0" mnemonicParsing="false" onAction="#handleAdd1" text="  ADD " />
+                  <Button fx:id="Add2" layoutX="702.0" layoutY="167.0" mnemonicParsing="false" onAction="#handleAdd2" text="  ADD " />
+                  <Button fx:id="Add3" layoutX="702.0" layoutY="226.0" mnemonicParsing="false" onAction="#handleAdd3" text="  ADD " />
+                  <Button fx:id="Add4" layoutX="702.0" layoutY="284.0" mnemonicParsing="false" onAction="#handleAdd4" text="  ADD " />
+                  <Button fx:id="Add5" layoutX="702.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleAdd5" text="  ADD " />
+                  <TextField fx:id="textField5" layoutX="514.0" layoutY="337.0" />
+                  <TextField fx:id="textField4" layoutX="514.0" layoutY="284.0" />
+                  <TextField fx:id="textField3" layoutX="514.0" layoutY="226.0" />
+                  <TextField fx:id="textField2" layoutX="514.0" layoutY="167.0" />
+                  <TextField fx:id="textFileld1" layoutX="514.0" layoutY="111.0" />
+                  <Button fx:id="confirm5" layoutX="400.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleConfirm5" text="Confirm" />
+                  <Button fx:id="confirm4" layoutX="400.0" layoutY="284.0" mnemonicParsing="false" onAction="#handleConfirm4" text="Confirm" />
+                  <Button fx:id="confirm3" layoutX="400.0" layoutY="226.0" mnemonicParsing="false" onAction="#handleConfirm3" text="Confirm" />
+                  <Button fx:id="confirm2" layoutX="400.0" layoutY="167.0" mnemonicParsing="false" onAction="#handleConfirm2" text="Confirm" />
+                  <Button fx:id="confirm1" layoutX="400.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleConfirm1" text="Confirm" />
+                  <ComboBox fx:id="field5" layoutX="214.0" layoutY="338.0" prefWidth="150.0" />
+                  <ComboBox fx:id="field4" layoutX="214.0" layoutY="284.0" prefWidth="150.0" />
+                  <ComboBox fx:id="field3" layoutX="214.0" layoutY="226.0" prefWidth="150.0" />
+                  <ComboBox fx:id="field2" layoutX="214.0" layoutY="167.0" prefWidth="150.0" />
+                  <ComboBox fx:id="field1" layoutX="214.0" layoutY="111.0" prefWidth="150.0" />
+                  <Label layoutX="33.0" layoutY="217.0" prefHeight="40.0" prefWidth="152.0" text="physicalInformation">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="83.0" layoutY="329.0" prefHeight="40.0" prefWidth="52.0" text="graph">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="275.0" prefHeight="40.0" prefWidth="152.0" text="mentalInformation">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="47.0" layoutY="158.0" prefHeight="40.0" prefWidth="125.0" text="userInformation">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="56.0" layoutY="98.0" prefHeight="40.0" prefWidth="107.0" text="administrator">
+                     <font>
+                        <Font name="Tw Cen MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

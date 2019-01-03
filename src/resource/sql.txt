@@ -1,0 +1,60 @@
+
+drop database if exists psychologyAnalysis;
+create database psychologyAnalysis;
+use psychologyAnalysis;
+drop table if exists administrator;
+drop table if exists userInformation;
+drop table if exists mentalInformation;
+drop table if exists physicalInformation;
+drop table if exists graph;
+create table administrator (
+  administratorId   int(20) primary key not null,
+  administratorName varchar(20)         not null,
+  administratorPwd  varchar(20)         not null
+);
+create table userInformation (
+  naturalDataNo int(20) primary key  not null, #用户自然信息编号
+  age           int(20)              not null,
+  job           varchar(100)         not null,
+  department    varchar(100)         not null,
+  region        varchar(100)         not null,
+  education     varchar(100)         not null,
+  userId        int(20)              not null
+);
+create table mentalInformation (
+  mentaldataNo      int(20) primary key not null,
+  checkListData     varchar(100)        not null,
+  selectedColor     varchar(100)        not null,
+  selectedImageNo   varchar(20)         not null,
+  stressSource      varchar(100)        not null,
+  mentalCareHistory varchar(100)        not null,
+  userId            int(20)             not null
+);
+create table physicalInformation (
+  physicaldataNo int(20) primary key not null,
+  heartbeat      varchar(100),
+  bloodPressure  varchar(100),
+  autonomicNerve varchar(100)        not null,
+  userId         int(20)             not null
+);
+create table graph (
+  graphId          int(20) primary key not null,
+  graphTitle       varchar(100)        not null,
+  PhysicalORMental varchar(255)        not null,
+  PhyORMentalField varchar(255)        not null,
+  graphType        varchar(255)        not null
+);
+select column_name
+from information_schema.COLUMNS
+where TABLE_NAME = 'graph';
+select column_name
+from information_schema.COLUMNS
+where TABLE_NAME = 'userInformation';
+insert into userInformation values (1,23,'bn','nn','2','f',1);
+insert into userInformation values (2,23,'bn','nn','2','f',2);
+insert into userInformation values (3,23,'bn','nn','2','f',3);
+insert into userInformation values (4,23,'bn','nn','2','f',4);
+insert into physicalInformation values (1,120,125,11,1);
+insert into physicalInformation values (2,132,134,133,1);
+insert into physicalInformation values (3,145,123,121,1);
+insert into physicalInformation values (4,123,45,131,1);
